@@ -1,0 +1,11 @@
+baidubce==0.8.3
+bce-python-sdk==0.8.64
+charset-normalizer==2.0.10
+future==0.18.2
+idna==3.3
+protocol==0.1.0
+pycryptodome==3.13.0
+requests==2.27.1
+urllib3==1.26.8
+utils==1.0.1
+
