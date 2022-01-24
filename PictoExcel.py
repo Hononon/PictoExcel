@@ -12,6 +12,7 @@ from baidubce.http import http_methods
 from baidubce import bce_client_configuration
 import time
 import urllib
+import os
 
 # s1为官网获取的API Key， s2为官网获取的Secret Key
 client_id='client_id='+'s1'
@@ -90,6 +91,10 @@ if __name__ == '__main__':
     print ("正在下载")
     url = (res.__dict__['raw_data'].split(':')[2]+':'+res.__dict__['raw_data'].split(':')[3].split(',')[0]).split('"')[1]
     f = urllib.request.urlopen(url)
+    if os.path.exists('Excel/'):
+        pass    
+    else:
+        os.makedirs('Excel/')
     data = f.read()
     with open("Excel/"+picture.split('.')[0]+'.xls', "wb") as code:
         code.write(data)
