@@ -21,7 +21,6 @@ response = requests.get(host)
 if response:
     access_token=response.json()['access_token']
 
-#access_token = '24.cdebea13a8c07668cc7ffba9d1032b48.2592000.1645594004.282335-25551721'
 #表格文字识别(异步接口)
 
 picture=input('请输入Pic文件夹下待处理的图片名(包含后缀)')
